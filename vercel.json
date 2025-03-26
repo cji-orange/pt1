@@ -8,15 +8,10 @@
   ],
   "routes": [
     {
-      "src": "/css/styles.css",
-      "dest": "/css/styles.css"
+      "handle": "filesystem"
     },
     {
-      "src": "/js/(.*)",
-      "dest": "/js/$1"
-    },
-    {
-      "src": "/(.*)",
+      "src": "/",
       "dest": "/practice_tracker.html"
     }
   ]

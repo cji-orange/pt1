@@ -8,18 +8,44 @@
   ],
   "routes": [
     {
-      "src": "/js/(.*)",
-      "dest": "/js/$1",
-      "headers": {
-        "Content-Type": "application/javascript"
-      }
+      "src": "/js/config\\.js",
+      "headers": { "Content-Type": "application/javascript" },
+      "dest": "/js/config.js"
+    },
+    {
+      "src": "/js/auth\\.js",
+      "headers": { "Content-Type": "application/javascript" },
+      "dest": "/js/auth.js"
+    },
+    {
+      "src": "/js/app\\.js",
+      "headers": { "Content-Type": "application/javascript" },
+      "dest": "/js/app.js"
+    },
+    {
+      "src": "/js/timer\\.js",
+      "headers": { "Content-Type": "application/javascript" },
+      "dest": "/js/timer.js"
+    },
+    {
+      "src": "/js/history\\.js",
+      "headers": { "Content-Type": "application/javascript" },
+      "dest": "/js/history.js"
+    },
+    {
+      "src": "/js/reports\\.js",
+      "headers": { "Content-Type": "application/javascript" },
+      "dest": "/js/reports.js"
+    },
+    {
+      "src": "/js/settings\\.js",
+      "headers": { "Content-Type": "application/javascript" },
+      "dest": "/js/settings.js"
     },
     {
       "src": "/css/(.*)",
-      "dest": "/css/$1",
-      "headers": {
-        "Content-Type": "text/css"
-      }
+      "headers": { "Content-Type": "text/css" },
+      "dest": "/css/$1"
     },
     {
       "src": "/(.*)",

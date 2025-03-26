@@ -8,11 +8,14 @@
   ],
   "routes": [
     {
-      "handle": "filesystem"
+      "src": "/(css|js)/.*",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate"
+      }
     },
     {
-      "src": "/",
-      "dest": "/practice_tracker.html"
+      "src": "/(.*)",
+      "dest": "/$1"
     }
   ]
 } 

@@ -8,38 +8,11 @@
   ],
   "routes": [
     {
-      "src": "/js/(.*)",
-      "dest": "/js/$1",
-      "continue": true
-    },
-    {
-      "src": "/css/(.*)",
-      "dest": "/css/$1",
-      "continue": true
+      "handle": "filesystem"
     },
     {
       "src": "/(.*)",
-      "dest": "/practice_tracker.html"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/js/(.*)",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "application/javascript"
-        }
-      ]
-    },
-    {
-      "source": "/css/(.*)",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "text/css"
-        }
-      ]
+      "dest": "/$1"
     }
   ]
 } 

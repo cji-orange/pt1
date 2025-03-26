@@ -47,7 +47,7 @@ const app = {
         if (!auth.state.user) return;
 
         try {
-            const response = await fetch('http://localhost:3000/api/user', {
+            const response = await fetch(`${config.backendUrl}/api/user`, {
                 headers: {
                     'Authorization': `Bearer ${auth.state.token}`
                 }
@@ -70,7 +70,7 @@ const app = {
         if (!auth.state.isAuthenticated) return;
 
         try {
-            const response = await fetch('http://localhost:3000/api/user', {
+            const response = await fetch(`${config.backendUrl}/api/user`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -281,7 +281,7 @@ const app = {
         if (!confirm('Are you sure you want to delete this practice session?')) return;
 
         try {
-            const response = await fetch(`http://localhost:3000/api/user/practice/${sessionId}`, {
+            const response = await fetch(`${config.backendUrl}/api/user/practice/${sessionId}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${auth.state.token}`

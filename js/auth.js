@@ -52,7 +52,7 @@ const auth = {
         const password = document.getElementById('loginPassword').value;
 
         try {
-            const response = await fetch('http://localhost:3000/api/login', {
+            const response = await fetch(`${config.backendUrl}/api/login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -84,7 +84,7 @@ const auth = {
         const password = document.getElementById('registerPassword').value;
 
         try {
-            const response = await fetch('http://localhost:3000/api/register', {
+            const response = await fetch(`${config.backendUrl}/api/register`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -119,7 +119,7 @@ const auth = {
 
     async fetchUserData() {
         try {
-            const response = await fetch('http://localhost:3000/api/user', {
+            const response = await fetch(`${config.backendUrl}/api/user`, {
                 headers: {
                     'Authorization': `Bearer ${this.state.token}`
                 }
@@ -177,7 +177,7 @@ const auth = {
         }
 
         try {
-            const response = await fetch('http://localhost:3000/api/user', {
+            const response = await fetch(`${config.backendUrl}/api/user`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${this.state.token}`

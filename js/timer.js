@@ -199,7 +199,7 @@ const timer = {
         }
 
         try {
-            const response = await fetch('http://localhost:3000/api/user/practice', {
+            const response = await fetch(`${config.backendUrl}/api/user/practice`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

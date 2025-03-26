@@ -56,7 +56,7 @@ const settings = {
 
     async loadSettings() {
         try {
-            const response = await fetch('http://localhost:3000/api/user', {
+            const response = await fetch(`${config.backendUrl}/api/user`, {
                 headers: {
                     'Authorization': `Bearer ${auth.state.token}`
                 }
@@ -163,7 +163,7 @@ const settings = {
         const description = document.getElementById('newInstrumentDescription').value;
 
         try {
-            const response = await fetch('http://localhost:3000/api/user', {
+            const response = await fetch(`${config.backendUrl}/api/user`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -195,7 +195,7 @@ const settings = {
         const description = document.getElementById('newCategoryDescription').value;
 
         try {
-            const response = await fetch('http://localhost:3000/api/user', {
+            const response = await fetch(`${config.backendUrl}/api/user`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -233,7 +233,7 @@ const settings = {
                 updatedUser.categories = updatedUser.categories.filter(c => c !== value);
             }
 
-            const response = await fetch('http://localhost:3000/api/user', {
+            const response = await fetch(`${config.backendUrl}/api/user`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

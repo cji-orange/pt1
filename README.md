@@ -92,4 +92,49 @@ Feel free to submit issues and enhancement requests!
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details. 
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+# Practice Tracker Backend
+
+This is the backend server for the instrument practice tracking application.
+
+## Setup
+
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Create a `.env` file with the following variables:
+   ```
+   MONGODB_URI=your_mongodb_connection_string
+   JWT_SECRET=your_jwt_secret_key
+   PORT=10000
+   ```
+
+## Running the Server
+
+Development mode:
+```bash
+npm run dev
+```
+
+Production mode:
+```bash
+npm start
+```
+
+## API Endpoints
+
+- POST `/api/register` - Register a new user
+- POST `/api/login` - Login user
+- GET `/api/user` - Get user data
+- PUT `/api/user` - Update user data
+- POST `/api/user/practice` - Add practice session
+- DELETE `/api/user` - Delete account
+
+## Environment Variables
+
+- `MONGODB_URI`: MongoDB connection string
+- `JWT_SECRET`: Secret key for JWT token generation
+- `PORT`: Server port (default: 3000) 

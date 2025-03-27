@@ -27,24 +27,28 @@ const timer = {
         const instrumentSelect = document.getElementById('instrument');
         if (instrumentSelect) {
             instrumentSelect.innerHTML = '<option value="">Select an instrument</option>';
-            auth.state.user.instruments.forEach(instrument => {
-                const option = document.createElement('option');
-                option.value = instrument;
-                option.textContent = instrument;
-                instrumentSelect.appendChild(option);
-            });
+            if (auth.state.user && auth.state.user.instruments) {
+                auth.state.user.instruments.forEach(instrument => {
+                    const option = document.createElement('option');
+                    option.value = instrument;
+                    option.textContent = instrument;
+                    instrumentSelect.appendChild(option);
+                });
+            }
         }
 
         // Populate category select
         const categorySelect = document.getElementById('category');
         if (categorySelect) {
             categorySelect.innerHTML = '<option value="">Select a category</option>';
-            auth.state.user.categories.forEach(category => {
-                const option = document.createElement('option');
-                option.value = category;
-                option.textContent = category;
-                categorySelect.appendChild(option);
-            });
+            if (auth.state.user && auth.state.user.categories) {
+                auth.state.user.categories.forEach(category => {
+                    const option = document.createElement('option');
+                    option.value = category;
+                    option.textContent = category;
+                    categorySelect.appendChild(option);
+                });
+            }
         }
     },
 
